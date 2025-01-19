@@ -20,9 +20,9 @@ interface DataType {
 
 const postData: DataType[] = [
     {
-        heading: 'Full stack modern',
-        heading2: 'javascript',
-        name: "Colt stelle",
+        heading: 'Lab Test',
+        heading2: '',
+        name: "",
         imgSrc: '/assets/courses/courseone.png',
         students: 150,
         classes: 12,
@@ -30,9 +30,9 @@ const postData: DataType[] = [
         rating: 4.7,
     },
     {
-        heading: 'Design system',
-        heading2: 'with React programme',
-        name: "Colt stelle",
+        heading: 'X- Ray',
+        heading2: '',
+        name: "",
         imgSrc: '/assets/courses/coursetwo.png',
         students: 130,
         classes: 12,
@@ -40,9 +40,9 @@ const postData: DataType[] = [
         rating: 4.7,
     },
     {
-        heading: 'Design banner',
-        heading2: 'with Figma',
-        name: "Colt stelle",
+        heading: 'Ultrasound',
+        heading2: '',
+        name: "",
         imgSrc: '/assets/courses/coursethree.png',
         students: 120,
         classes: 12,
@@ -121,12 +121,12 @@ export default class MultipleItems extends Component {
 
 
         return (
-            <div id="courses">
+            <div id="offerings">
                 <div className='mx-auto max-w-7xl sm:py-8 px-4 lg:px-8 '>
 
                     <div className="sm:flex justify-between items-center">
-                        <h3 className="text-midnightblue text-4xl lg:text-55xl font-semibold mb-5 sm:mb-0">Popular courses.</h3>
-                        <Link href={'/'} className="text-Blueviolet text-lg font-medium space-links">Explore courses&nbsp;&gt;&nbsp;</Link>
+                        <h3 className="text-midnightblue text-4xl lg:text-55xl font-semibold mb-5 sm:mb-0">Popular services.</h3>
+                        <Link href={'/services'} className="text-Blueviolet text-lg font-medium space-links">Explore All Services&nbsp;&gt;&nbsp;</Link>
                     </div>
 
 
@@ -135,12 +135,12 @@ export default class MultipleItems extends Component {
                             <div key={i}>
 
                                 <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl'>
-                                    <div className="relative rounded-3xl">
+                                    {/* <div className="relative rounded-3xl">
                                         <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="m-auto clipPath" />
                                         <div className="absolute right-5 -bottom-2 bg-ultramarine rounded-full p-6">
                                             <h3 className="text-white uppercase text-center text-sm font-medium">best <br /> seller</h3>
                                         </div>
-                                    </div>
+                                    </div> */}
 
                                     <div className="px-3">
                                         <h4 className='text-2xl font-bold pt-6 text-black'>{items.heading}</h4>
@@ -152,17 +152,17 @@ export default class MultipleItems extends Component {
 
                                         <div className="flex justify-between items-center py-6">
                                             <div className="flex gap-4">
-                                                <h3 className="text-red text-22xl font-medium">{items.rating}</h3>
+                                                {/* <h3 className="text-red text-22xl font-medium">{items.rating}</h3>
                                                 <div className="flex">
                                                     <StarIcon className="h-5 w-5 text-gold" />
                                                     <StarIcon className="h-5 w-5 text-gold" />
                                                     <StarIcon className="h-5 w-5 text-gold" />
                                                     <StarIcon className="h-5 w-5 text-gold" />
                                                     <StarIcon className="h-5 w-5 text-gold" />
-                                                </div>
+                                                </div> */}
                                             </div>
                                             <div>
-                                                <h3 className="text-3xl font-medium">${items.price}</h3>
+                                                {/* <h3 className="text-3xl font-medium">${items.price}</h3> */}
                                             </div>
                                         </div>
 
@@ -170,12 +170,12 @@ export default class MultipleItems extends Component {
 
                                         <div className="flex justify-between pt-6">
                                             <div className="flex gap-4">
-                                                <Image src={'/assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
-                                                <h3 className="text-base font-medium text-black opacity-75">{items.classes} classes</h3>
+                                                {/* <Image src={'/assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                <h3 className="text-base font-medium text-black opacity-75">{items.classes} classes</h3> */}
                                             </div>
                                             <div className="flex gap-4">
-                                                <Image src={'/assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
-                                                <h3 className="text-base font-medium text-black opacity-75">{items.students} students</h3>
+                                                {/* <Image src={'/assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                <h3 className="text-base font-medium text-black opacity-75">{items.students} students</h3> */}
                                             </div>
                                         </div>
                                     </div>
