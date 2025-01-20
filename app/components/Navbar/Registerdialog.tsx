@@ -13,12 +13,35 @@ const Register = () => {
     const openModal = () => {
         setIsOpen(true)
     }
+    const handleLogin = async () => {
+        try {
+          // Fetch the WorkOS sign-in URL from the backend
+          const response = await fetch('/api/login', {
+            method: 'GET',
+          });
+      
+          if (!response.ok) {
+            throw new Error('Failed to fetch the login URL');
+          }
+      
+          const { url } = await response.json();
+      
+          if (!url) {
+            throw new Error('No URL returned from API');
+          }
+      
+          // Redirect to the WorkOS login page
+          window.location.href = url;
+        } catch (error) {
+          console.error('Error fetching sign-in URL:', error);
+        }
+      };
 
     return (
         <>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
                 <div className='hidden lg:block'>
-                    <button className="text-Blueviolet text-lg font-medium ml-9 py-5 px-16 transition duration-150 ease-in-out rounded-full bg-semiblueviolet hover:text-white hover:bg-Blueviolet" onClick={openModal}>
+                    <button className="text-Blueviolet text-lg font-medium ml-9 py-5 px-16 transition duration-150 ease-in-out rounded-full bg-semiblueviolet hover:text-white hover:bg-Blueviolet" onClick={handleLogin}>
                         Sign up
                     </button>
                 </div>

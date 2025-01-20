@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import dbConnect  from '../../../public/lib/dbConnect'
-import User from '@/public/models/User';
+import dbConnect  from '../../../lib/dbConnect'
+import User from '@/models/User';
  
 // Handle GET requests to "/api/findUsers"
 export async function GET(req: NextRequest) {
